@@ -1,0 +1,16 @@
+<%= f = form_for @conn, Routes.credit_approval_path(@conn, :able), [phx_submit: "submit"] %>
+
+  <%= label f, "What is your total monthly income from all income source?(USD)" %>
+  <%= text_input f, :incomes %>
+
+
+  <%= label f, "What are your total monthly expenses?(USD)" %>
+  <%= text_input f, :expenses %>
+
+<%= hidden_input f, :points , value: @points %>
+
+
+
+ <div>
+    <%= submit "Guardar" %>
+  </div>

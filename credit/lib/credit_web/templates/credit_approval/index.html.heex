@@ -1,0 +1,23 @@
+<%= f = form_for @conn, Routes.credit_approval_path(@conn, :create), [phx_submit: "submit"] %>
+
+  <%= label f, "Do you have a paying job?" %>
+<%= select f, :job, ["Yes", "No"] %>
+
+  <%= label f, "Do you consistently had a paying job for past 12 month?" %>
+<%= select f, :consistenlyjob, ["Yes", "No"] %>
+
+
+  <%= label f, "Do you own a home? " %>
+<%= select f, :ownhome, ["Yes", "No"] %>
+
+
+  <%= label f, "Do you own a car? " %>
+<%= select f, :owncar, ["Yes", "No"] %>
+
+  <%= label f, "Do you have additional income? " %>
+<%= select f, :additional, ["Yes", "No"] %>
+
+
+ <div>
+    <%= submit "Guardar" %>
+  </div>
